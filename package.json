@@ -1,0 +1,41 @@
+{
+  "name": "my-gatsby-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "my-gatsby-site",
+  "author": "wnhollington",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@mdx-js/react": "^2.1.3",
+    "@react-icons/all-files": "^4.1.0",
+    "algoliasearch": "^4.14.2",
+    "autoprefixer": "^10.4.8",
+    "gatsby": "^4.21.1",
+    "gatsby-plugin-algolia": "^0.26.0",
+    "gatsby-plugin-feed": "^4.21.0",
+    "gatsby-plugin-image": "^2.21.0",
+    "gatsby-plugin-mailchimp": "^5.2.2",
+    "gatsby-plugin-manifest": "^4.21.0",
+    "gatsby-plugin-mdx": "^4.0.0",
+    "gatsby-plugin-postcss": "^5.21.0",
+    "gatsby-plugin-sharp": "^4.21.0",
+    "gatsby-plugin-sitemap": "^5.21.0",
+    "gatsby-source-filesystem": "^4.21.1",
+    "gatsby-transformer-sharp": "^4.21.0",
+    "postcss": "^8.4.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-instantsearch-dom": "^6.32.0",
+    "reading-time": "^1.5.0",
+    "tailwindcss": "^3.1.8"
+  }
+}

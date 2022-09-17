@@ -1,0 +1,34 @@
+@tailwind base;
+@layer base {
+    h1 {
+        @apply text-2xl font-bold;
+    }
+
+    h2 {
+        @apply text-xl font-bold;
+    }
+
+    h3 {
+        @apply text-lg font-bold;
+    }
+}
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
+article p {
+    @apply my-4
+}
+
+main p {
+    @apply my-4
+}
+
+.ais-SearchBox input:focus {
+    outline: none;
+}
+.ais-SearchBox form {
+    border: 2px solid darkgray;
+    border-radius: 25px;
+    padding: .5rem 1rem;
+}

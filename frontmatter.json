@@ -1,0 +1,16 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "gatsby",
+  "frontMatter.content.publicFolder": "static",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "pages",
+      "path": "[[workspace]]/.frontmatter/content/pages"
+    },
+    {
+      "title": "articles",
+      "path": "[[workspace]]/.frontmatter/content/articles"
+    }
+  ],
+  "frontMatter.templates.enabled": true
+}
