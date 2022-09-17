@@ -13,7 +13,7 @@ const ExactNavLink = props => (
 // Render
 const FooterNav = () => {
   return (
-    <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+    <ul className="flex flex-row my-3 space-x-5">
       <li>
         <ExactNavLink
           to="/contact"
