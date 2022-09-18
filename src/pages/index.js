@@ -7,24 +7,27 @@ import Seo from '../components/layout/seo'
 import Modal from '../components/elements/modal'
 import NewsletterSignup from '../components/elements/newsletter-signup'
 
+// Hooks
+import { useSiteMetadata } from '../hooks/use-site-metadata'
+
 const IndexPage = ({ data }) => {
   // Featured Articles
   const articles = data.allMdx.edges
+  // Site Meta
+  const { title, description } = useSiteMetadata();
   return (
     <Layout>
 
       {/* Hero */}
-      <section className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <section className="px-4 py-4 lg:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="grid gap-5 row-gap-8 lg:grid-cols-2">
           <div className="flex flex-col justify-center">
             <div className="max-w-xl mb-6">
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                The quick, brown fox jumps over a lazy dog
+                {title}
               </h2>
               <p className="text-base text-gray-700 md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae. explicabo.
+                {description}
               </p>
             </div>
             <div className="grid gap-5 row-gap-8 sm:grid-cols-2">
@@ -57,7 +60,7 @@ const IndexPage = ({ data }) => {
 
       {/* Recent Posts */}
       <section className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        <div className="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
           <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
             Featured Posts
           </h2>
@@ -110,14 +113,17 @@ const IndexPage = ({ data }) => {
 
       {/* Signup CTA */}
       <section class="bg-gray-100 px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-          <div class="lg:flex lg:items-center lg:justify-between">
+          <div class="flex flex-col lg:flex-row">
+            <div className="my-2 py-2 lg:mr-4">
               <h2 class="text-2xl font-semibold tracking-tight text-gray-800 w-full">
                   Subscribe to get legal updates directly to your inbox.
               </h2>
+              <p>Tired of coming to us? We'll come to you. Enter your email address to receive notification of new posts by email.</p>
+            </div>
               
-              <div class="mt-8 lg:mt-0 w-3/4">
-                <NewsletterSignup formId={"cta-signup"}/>
-              </div>
+            <div className="my-2 py-2 lg:w-1/2">
+              <NewsletterSignup formId={"cta-signup"}/>
+            </div>
           </div>
       </section>
     </Layout>

@@ -8,7 +8,7 @@ const NavDropdown = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="lg:hidden flex flex-col items-center mx-2 w-0">
+        <div className="lg:hidden flex flex-col items-center mx-6 w-0">
             <button
             aria-label="Toggle Menu"
             title="Toggle Menu"
