@@ -7,9 +7,9 @@ import ContactForm from "../components/elements/contact-form"
 
 const Blog = () => (
   <Layout>
-        <div className="w-full flex items-center justify-center">
-            <ContactForm />
-        </div>   
+    <div className="w-full flex items-center justify-center">
+        <ContactForm />
+    </div>   
   </Layout>
 )
 
