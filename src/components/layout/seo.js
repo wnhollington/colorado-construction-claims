@@ -11,7 +11,7 @@ const Seo = ({ title, description }) => {
 
   return (
     <>
-      <title>{seo.title}</title>
+      <title>{seo.title} | {defaultTitle}</title>
       <meta name="description" content={seo.description} />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />

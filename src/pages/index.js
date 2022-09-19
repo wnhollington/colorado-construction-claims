@@ -154,7 +154,9 @@ export const query = graphql`
 
 
 export const Head = () => (
-  <Seo />
+  <Seo 
+    title="Home"
+  />
 )
 
 export default IndexPage
