@@ -2,8 +2,9 @@ import * as React from 'react'
 
 const ContactForm = () => (
 
-    <form name="contact" method="POST" className="bg-white dark:bg-gray-800 py-6 lg:px-28 px-8" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="contact" value="contact"/>
+    <form name="contact" method="post" className="bg-white dark:bg-gray-800 py-6 lg:px-28 px-8" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact"/>
+        <input type="hidden" name="bot-field"/>
         <div className="md:flex items-center mt-12">
             <div className="md:w-72 flex flex-col">
                 <label htmlFor="name" className="text-base font-semibold leading-none text-gray-800 dark:text-white">Name</label>
