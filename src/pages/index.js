@@ -112,7 +112,7 @@ const IndexPage = ({ data }) => {
       </section>
 
       {/* Signup CTA */}
-      <section class="bg-gray-100 px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <section class="bg-gray-100 px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 shadow-xl">
           <div class="flex flex-col lg:flex-row">
             <div className="my-2 py-2 lg:mr-4">
               <h2 class="text-2xl font-semibold tracking-tight text-gray-800 w-full">

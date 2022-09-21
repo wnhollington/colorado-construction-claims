@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Business Tort Blog`,
-    siteUrl: `https://www.yourdomain.tld`,
-    description: `Whether you are a business owner, departing employee, or a competitor, the Business Tort Blog was built with you in mind.  This blog will cover straightforward legal analysis of two main categories of business "torts": (1) claims between a company and departing employees and (2) claims between a company and other businesses.`,
+    title: `Colorado Business Torts`,
+    siteUrl: `https://www.coloradobusinesstorts.com`,
+    description: `Whether you are a business owner, departing employee, or a competitor, this site was built with you in mind.  This blog will cover straightforward legal analysis of two main categories of business "torts": (1) claims between a company and departing employees and (2) claims between a company and other businesses.`,
   },
   plugins: [
     "gatsby-plugin-postcss", 
@@ -124,7 +124,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Business Tort Blog | RSS Feed",
+            title: "Colorado Business Torts | RSS Feed",
           },
         ],
       },
