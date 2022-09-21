@@ -18,9 +18,9 @@ function Article ({ data, children, pageContext }) {
   return (
     <Layout>
         <header>
-            <div className="mx-auto sm:text-center lg:max-w-2xl">
-                <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-8">
-                    <h2 className="max-w-lg mb-4 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">
+            <div className="mx-auto sm:text-center lg:max-w-4xl my-10">
+                <div className="mb-10 md:mx-auto sm:text-center md:mb-8">
+                    <h2 className="mb-4 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">
                         {title}
                     </h2>
                     <ul className='flex flex-row space-x-4 justify-center'>
@@ -41,7 +41,7 @@ function Article ({ data, children, pageContext }) {
             </div>
         </header>
 
-        <article>
+        <article className="lg:max-w-4xl mx-auto">
             {children}
         </article>
 

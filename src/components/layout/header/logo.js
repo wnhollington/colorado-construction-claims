@@ -26,7 +26,7 @@ const Logo = () => {
           <rect x="14" y="1" width="7" height="6" />
           <rect x="14" y="11" width="7" height="12" />
         </svg>
-        <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+        <span className="ml-2 text-sm md:text-xl font-bold tracking-wide text-gray-800 uppercase">
         {title}
         </span>
     </a>
