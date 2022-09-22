@@ -51,8 +51,8 @@ const IndexPage = ({ data }) => {
           <div>
             <img
               className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
-              src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
-              alt=""
+              src="https://res.cloudinary.com/wnhollington/image/upload/v1663851347/colorado-business-torts/image5_xuuymc.jpg"
+              alt={title}
             />
           </div>
         </div>

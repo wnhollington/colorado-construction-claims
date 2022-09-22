@@ -6,7 +6,8 @@ const contributors= [
     {
         name: 'W. Neal Hollington, Esq.',
         photo: "https://res.cloudinary.com/wnhollington/image/upload/v1647487893/small_Neal_Hollington_8b6ae1c8d6.jpg",
-        description: "Neal is a commercial litigation attorney in the Denver office of Hall Booth Smith, P.C. Through his practice, he has litigated a variety of business-related torts (fraud, tortious interference, defamation, breach of fiduciary duty, etc.) in both state and federal court and arbitration proceedings.  Beyond serving as litigation counsel, he assists clients in streamlining their business operations through effective counsel on contract drafting and negotiation, due diligence, business planning, employment and independent contractor issues, and other business-related concerns.  He is recognized by Best Lawyers as \"One to Watch\" in Commercial Litigation and Construction Law.",
+        description: "Neal is a commercial litigation attorney in the Denver office of Hall Booth Smith, P.C. Through his practice, he has litigated a variety of business-related torts (fraud, tortious interference, defamation, breach of fiduciary duty, etc.) in both state and federal court and arbitration proceedings.  Beyond serving as litigation counsel, he assists clients in streamlining their business operations through effective counsel on contract drafting and negotiation, due diligence, business planning, employment and independent contractor issues, and other business-related concerns.",
+        recognitions: "Recognized by Best Lawyers as \"One to Watch\" in Commercial Litigation and Construction Law.",
         social: {
             linkedin: "https://www.linkedin.com/in/wnhollington",
             company: "https://hallboothsmith.com/attorney/w-neal-hollington/"
@@ -27,22 +28,23 @@ const Contributors= () => {
                             <div className="p-4 w-full md:w-2/3">
                                 <h6 className="mb-2 font-semibold leading-5 text-center md:text-left">{contributor.name}</h6>
                                 <p className="text-base text-gray-900">{contributor.description}</p>
-                                    <div className="flex items-center mt-1 space-x-3">
-                                        <a
-                                        href={contributor.social.linkedin}
-                                        className="text-gray-500 transition-colors duration-300 hover:text-primary-700"
-                                        target={"_blank"}
-                                        rel={"noreferrer"}
-                                        >
-                                            <AiFillLinkedin size={32} />
-                                        </a>
-                                        <a href={contributor.social.company}
-                                        className="text-gray-500 transition-colors duration-300 hover:text-primary-700"
-                                        target={"_blank"}
-                                        rel={"noreferrer"}>
-                                            <BiBuilding size={32}/>
-                                        </a>
-                                    </div>
+                                <p className="text-base text-gray-900">{contributor.recognitions}</p>
+                                <div className="flex items-center mt-1 space-x-3">
+                                    <a
+                                    href={contributor.social.linkedin}
+                                    className="text-gray-500 transition-colors duration-300 hover:text-primary-700"
+                                    target={"_blank"}
+                                    rel={"noreferrer"}
+                                    >
+                                        <AiFillLinkedin size={32} />
+                                    </a>
+                                    <a href={contributor.social.company}
+                                    className="text-gray-500 transition-colors duration-300 hover:text-primary-700"
+                                    target={"_blank"}
+                                    rel={"noreferrer"}>
+                                        <BiBuilding size={32}/>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     )
