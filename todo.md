@@ -1,2 +1,0 @@
-- Add Social Media to .config and include in footer
-- Content
