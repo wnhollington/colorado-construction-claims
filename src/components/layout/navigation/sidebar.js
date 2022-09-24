@@ -3,14 +3,14 @@ import { useState } from 'react';
 import { Link } from 'gatsby';
 import { AiOutlineCloseCircle } from "@react-icons/all-files/ai/AiOutlineCloseCircle"
 
-const NavDropdown = () => {
+const Sidebar = ({modalOpen, setModalOpen}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
         <div className="lg:hidden flex flex-col items-center justify-center py-2">
             {isMenuOpen ? (
                 <button
-                className="flex text-4xl text-gray-600 items-center cursor-pointer fixed right-10 top-6 z-50"
+                className="flex text-4xl text-gray-600 items-center cursor-pointer right-10 top-6 z-50"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="Open Menu"
                 >
@@ -20,7 +20,7 @@ const NavDropdown = () => {
 
                 <button
                 aria-label="Close Menu"
-                className="fixed  z-30 flex items-center cursor-pointer right-10 top-6"
+                className="z-30 flex items-center cursor-pointer right-10 top-6"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                     <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -39,8 +39,8 @@ const NavDropdown = () => {
                     </svg>
                 </button>
             )}    
-            <nav className={`top-0 right-0 w-[35vw] bg-gray-100 p-10 text-white fixed h-full z-40  ease-in-out duration-300 ${ isMenuOpen ? "translate-x-0 " : "translate-x-full"
-            }`}>
+            <nav className={`top-0 right-0 w-[50vw] sm:w-[35vw] bg-white p-10 text-white fixed h-full z-40 ease-in-out duration-600 ${ isMenuOpen ? "translate-x-0 " : "translate-x-full"
+            } border-l-2 border-primary-700`}>
                 <ul className="space-y-4">
                     <li>
                         <Link
@@ -72,6 +72,11 @@ const NavDropdown = () => {
                         Contact
                         </Link>
                     </li>
+                    <li>
+                        <button className="inline-flex items-center justify-center h-8 p-2 font-medium tracking-wide text-white transition duration-200 rounded shadow bg-primary-700 hover:bg-primary-600 focus:shadow-outline focus:outline-none" type="button" onClick={() => setModalOpen(!modalOpen)}>
+                            Subscribe
+                        </button>
+                    </li>
                 </ul>
             </nav>
         
@@ -80,4 +85,4 @@ const NavDropdown = () => {
     )
 }
 
-export default NavDropdown
+export default Sidebar

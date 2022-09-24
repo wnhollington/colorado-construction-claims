@@ -1,19 +1,14 @@
-import React, {useState} from "react"
+import * as React from "react"
 import NewsletterSignup from "./newsletter-signup"
 
-const Modal = ({buttonClasses}) => {
-    const [modalOpen, setModalOpen] = useState(false)
+const SignupModal = ({modalOpen, setModalOpen}) => {
     return (
-        <>
-            <button className={buttonClasses} type="button" data-modal-toggle="defaultModal" onClick={() => setModalOpen(!modalOpen)}>
-            Subscribe
-            </button>
-
+        <div>
             {modalOpen && (
-                <div id="defaultModal" tabindex="-1" aria-hidden="true" className=" overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                <div id="defaultModal" tabindex="-1" aria-hidden="true" className="fixed z-50 lg:w-full">
                     <div className="relative p-4 w-full max-w-2xl h-full md:h-auto mx-auto">
 
-                        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700 shadow-lg">
 
                             <div className="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
                                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -38,8 +33,8 @@ const Modal = ({buttonClasses}) => {
                     </div>
                 </div>
             )}
-        </>
+        </div>
     )
 }
 
-export default Modal
+export default SignupModal

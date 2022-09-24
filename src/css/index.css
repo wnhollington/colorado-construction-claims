@@ -18,7 +18,8 @@
 /* Custom CSS */
 
 ::selection {
-    background: darkgray;
+    background: rgb(194 65 12);
+    color: white;
 }
 
 article p {

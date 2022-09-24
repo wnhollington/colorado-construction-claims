@@ -9,7 +9,7 @@ import Seo from '../components/layout/seo'
 function Page({ data: { mdx }, children }) {
   return (
     <Layout>
-      <article className="lg:max-w-4xl mx-auto">
+      <article>
         {mdx.frontmatter.title === 'Disclaimer' || mdx.frontmatter.title === 'Privacy Policy' ? <><h1>{mdx.frontmatter.title}</h1> <p>Last Modified: {mdx.frontmatter.lastmod}</p></> : null}
         {children}
       </article>

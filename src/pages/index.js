@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby'
 // Components
 import Layout from '../components/layout'
 import Seo from '../components/layout/seo'
-import Modal from '../components/elements/modal'
 import NewsletterSignup from '../components/elements/newsletter-signup'
 
 // Hooks
@@ -19,19 +18,41 @@ const IndexPage = ({ data }) => {
     <Layout>
 
       {/* Hero */}
-      <section className="py-4 lg:py-16 mx-auto lg:py-20 w-full">
-        <div className="grid gap-5 row-gap-8 lg:grid-cols-2">
+      <section className='py-4 lg:py-16 mx-auto w-full bg-hero-pattern bg-cover bg-left h-96 flex'>
+        <div className='flex flex-col justify-center items-center my-4 py-4 text-center max-w-3xl mx-auto'>
+          <h2 className='font-bold text-5xl text-gray-900 mb-4'>{title}</h2>
+          <p className='text-3xl font-bold text-gray-900'>{description}</p>
+        </div>
+      </section>
+
+      {/* About */}
+      <section className='py-4 lg:py-16 mx-auto w-full'>
+        <div className='max-w-full mb-10 md:mx-auto text-center md:mb-12'>
+          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+            About this Blog
+          </h2>
+          <p>Construction directly impacts where we live, where we work and go to school, where we shop, eat and entertain ourselves, and how we get from one place to another. In short, for most of us, the built environment “is” our world. At Nomos LLP, we understand the importance of construction – as well as the need to smile every once in awhile – and publish this blog to keep our friends and clients informed of new developments in construction law.</p>
+        </div>
+
+                <div className="grid gap-5 row-gap-8 lg:grid-cols-2">
+          
+          <div>
+            <img
+              className="object-cover object-top w-full h-56 rounded shadow-lg sm:h-96"
+              src="https://res.cloudinary.com/wnhollington/image/upload/v1663896646/Neal_Hollington_8b6ae1c8d6.jpg"
+              alt="W. Neal Hollington"
+            />
+          </div>
+
           <div className="flex flex-col justify-center">
             <div className="max-w-xl mb-6">
-              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                {title}
-              </h2>
-              <p className="text-base text-gray-700 md:text-lg">
-                {description}
+              <p className="text-base font-bold text-primary-700 md:text-lg">
+                Author and Attorney
               </p>
-            </div>
-            <div className="grid gap-5 row-gap-8 sm:grid-cols-2">
-              <Modal buttonClasses="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-primary-700 hover:bg-primary-600 focus:shadow-outline focus:outline-none" />
+              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                W. Neal Hollington, Esq.
+              </h2>
+              <p> W. Neal Hollington is a Colorado construction attorney who handles transactional and litigation matters for clients throughout the state of Colorado.  He routinely represent investors, owners, contractors, and subcontractors in real estate and construction-related matters.  Beyond serving as litigation counsel, he helps clients streamline their business operations through effective counsel on contract drafting and negotiation, due diligence, business planning, employment and independent contractor issues, and other business-related concerns.  Neal has been recognized by Best Lawyers "One to Watch" in Commercial Litigation and Construction Law.</p>
               <Link
                 to="/about"
                 aria-label=""
@@ -48,18 +69,12 @@ const IndexPage = ({ data }) => {
               </Link>
             </div>
           </div>
-          <div>
-            <img
-              className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
-              src="https://res.cloudinary.com/wnhollington/image/upload/v1663851347/colorado-business-torts/image5_xuuymc.jpg"
-              alt={title}
-            />
-          </div>
+
         </div>
       </section>
 
       {/* Recent Posts */}
-      <section className="py-4 lg:py-16 mx-auto lg:py-20 w-full">
+      <section className="pb-4 lg:pb-16 mx-auto  w-full">
         <div className="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
           <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
             Featured Posts
