@@ -7,7 +7,7 @@ import {
 } from "react-instantsearch-dom"
 
 const Hits = ({ hits }) => (
-  <div className="grid gap-5 row-gap-5 mb-8 lg:grid-cols-3 sm:grid-cols-2">
+  <div className="grid gap-5 row-gap-5 mb-8 grid-cols-1 lg:grid-cols-2">
     {hits.map(hit => (
       <Link
         to={`/blog/${hit.slug}`}

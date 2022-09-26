@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Colorado Business Torts`,
+    title: `Colorado Construction Claims`,
     siteUrl: `https://www.coloradobusinesstorts.com`,
-    description: `Whether you are a business owner, departing employee, or a competitor, this site was built with you in mind.  This blog will cover straightforward legal analysis of two main categories of business "torts": (1) claims between a company and departing employees and (2) claims between a company and other businesses.`,
+    description: `Legal commentary on Colorado construction law`,
   },
   plugins: [
     "gatsby-plugin-postcss", 

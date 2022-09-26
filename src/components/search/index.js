@@ -1,6 +1,6 @@
 import algoliasearch from "algoliasearch/lite"
 import { default as React, useState, useMemo } from "react"
-import { InstantSearch, connectMenu, SearchBox } from "react-instantsearch-dom"
+import { InstantSearch, SearchBox, connectMenu, Pagination } from "react-instantsearch-dom"
 import SearchResult from "./search-results"
 
 export default function Search({ indices }) {
@@ -15,25 +15,31 @@ export default function Search({ indices }) {
     []
   )
 
-  const MenuSelect = ({ items, currentRefinement, refine, type }) => (
-    <select
-      value={currentRefinement || ''}
-      onChange={event => refine(event.currentTarget.value)}
-      className="m-2 p-2 rounded-md"
-    >
-      <option value="">{type}</option>
-      {items.map(item => (
-        <option
-          key={item.label}
-          value={item.isRefined ? currentRefinement : item.value}
-        >
-          {item.label}
-        </option>
-      ))}
-    </select>
+  const Menu = ({ items, currentRefinement, refine, attribute}) => (
+    <div className="bg-gray-100 p-4 my-2 rounded-lg">
+      <h2 className="underline underline-offset-8 text-gray-900 font-bold">{attribute}</h2>
+      <ul className="my-2 p-2">
+        {items.map(item => (
+          <li 
+            key={item.value}
+            className="my-2 py-2 border-b"
+          >
+            <a
+              href="#"
+              onClick={event => {
+                event.preventDefault();
+                refine(item.value);
+              }}
+              className={item.label === currentRefinement ? "text-primary-800" : "text-gray-900 hover:text-primary-800"}
+            >
+              {item.label} ({item.count})
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
-
-  const CustomMenuSelect = connectMenu(MenuSelect);
+  const CustomMenu = connectMenu(Menu)
 
   return (
     <InstantSearch
@@ -41,19 +47,40 @@ export default function Search({ indices }) {
       indexName={indices[0].name}
       onSearchStateChange={({ query }) => setQuery(query)}
     >
-      <h2 class="text-3xl font-semibold tracking-tight text-gray-800 xl:text-4xl text-center">
-          Articles
-      </h2>
-      <section class="flex flex-col sm:flex-row justify-center items-center my-4">
-          <SearchBox />
-          <CustomMenuSelect attribute="category" type="All Categories"/>
-          <CustomMenuSelect attribute="tags" type="All Tags"/>
-      </section>
+      <div className="grid gap-5 row-gap-5 grid-cols-1 lg:grid-cols-4">
+        <section className="col-span-3">
+          <SearchResult
+            show={query && query.length > 0 && hasFocus}
+            indices={indices}
+          />
+	
 
-      <SearchResult
-        show={query && query.length > 0 && hasFocus}
-        indices={indices}
-      />
+          <Pagination
+            translations={{
+              previous: '‹',
+              next: '›',
+              first: '«',
+              last: '»',
+              page(currentRefinement) {
+                return currentRefinement;
+              },
+              ariaPrevious: 'Previous page',
+              ariaNext: 'Next page',
+              ariaFirst: 'First page',
+              ariaLast: 'Last page',
+              ariaPage(currentRefinement) {
+                return `Page ${currentRefinement}`;
+              },
+            }}
+          />
+
+        </section>
+        <section class="flex flex-col my-4 order-first lg:order-last">
+          <SearchBox />
+          <CustomMenu attribute="category"/>
+          <CustomMenu attribute="tags"/>
+        </section>
+      </div>
 
     </InstantSearch>
 

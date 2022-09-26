@@ -18,7 +18,7 @@ function Article ({ data, children, pageContext }) {
   return (
     <Layout>
         <header>
-            <div className="mx-auto sm:text-center lg:max-w-4xl my-10">
+            <div className="text-center my-10">
                 <div className="mb-10 md:mx-auto sm:text-center md:mb-8">
                     <h2 className="mb-4 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">
                         {title}
@@ -30,7 +30,7 @@ function Article ({ data, children, pageContext }) {
                 </div>
                 <div className="mb-4 transition-shadow duration-300 lg:mb-6">
                     <img
-                        className="object-cover w-full h-56 rounded shadow-lg sm:h-64 md:h-80 lg:h-96"
+                        className="w-full object-cover object-center rounded shadow-lg h-56 sm:h-64 md:h-80 lg:h-96"
                         src={img}
                         alt={title}
                     />
@@ -41,11 +41,11 @@ function Article ({ data, children, pageContext }) {
             </div>
         </header>
 
-        <article className="lg:max-w-4xl mx-auto">
+        <article>
             {children}
         </article>
 
-        <nav className='flex justify-around mx-4 my-6'>
+        <nav className='flex justify-between my-6'>
  
             <Link 
                 to={previous ? `/blog/${previous.frontmatter.slug}`: null} 

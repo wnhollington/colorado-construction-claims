@@ -6,7 +6,7 @@ const contributors= [
     {
         name: 'W. Neal Hollington, Esq.',
         photo: "https://res.cloudinary.com/wnhollington/image/upload/v1663896646/Neal_Hollington_8b6ae1c8d6.jpg",
-        description: "Neal is a commercial litigation attorney in the Denver office of Hall Booth Smith, P.C. Through his practice, he has litigated a variety of business-related torts (fraud, tortious interference, defamation, breach of fiduciary duty, etc.) in both state and federal court and arbitration proceedings.  Beyond serving as litigation counsel, he assists clients in streamlining their business operations through effective counsel on contract drafting and negotiation, due diligence, business planning, employment and independent contractor issues, and other business-related concerns.",
+        description: "W. Neal Hollington is a Colorado construction attorney who handles transactional and litigation matters for clients throughout the state of Colorado.  He routinely represent investors, owners, contractors, and subcontractors in real estate and construction-related matters.  Beyond serving as litigation counsel, he helps clients streamline their business operations through effective counsel on contract drafting and negotiation, due diligence, business planning, employment and independent contractor issues, and other business-related concerns.",
         recognitions: "Recognized by Best Lawyers as \"One to Watch\" in Commercial Litigation and Construction Law.",
         social: {
             linkedin: "https://www.linkedin.com/in/wnhollington",
@@ -46,6 +46,7 @@ const Contributors= () => {
                                     </a>
                                 </div>
                             </div>
+                            
                         </div>
                     )
                 })

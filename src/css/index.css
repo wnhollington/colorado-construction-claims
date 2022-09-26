@@ -18,7 +18,8 @@
 /* Custom CSS */
 
 ::selection {
-    background: darkgray;
+    background: rgb(194 65 12);
+    color: white;
 }
 
 article p {
@@ -29,16 +30,52 @@ main p {
     @apply my-4
 }
 
-.ais-SearchBox input:focus {
-    outline: none;
-}
-.ais-SearchBox form {
-    border: 2px solid darkgray;
-    border-radius: 25px;
-    padding: .5rem 1rem;
-}
-
 article ul {
     list-style-type: disc;
     margin-left: 1rem;
+}
+
+/* SearchBox */
+.ais-SearchBox {
+    margin: 0 0 .5rem 0;
+    border-radius: 25px;
+}
+.ais-SearchBox-input {
+    padding: .25rem .5rem;
+    border-radius: 25px;
+    border: 2px rgb(31 41 55) solid;
+}
+.ais-SearchBox-submitIcon {
+    display: none;
+}
+.ais-SearchBox-resetIcon {
+    margin-left: .5rem;
+}
+
+/* Pagination */
+.ais-Pagination {
+    display: flex;
+    justify-content: center;
+}
+.ais-Pagination-list {
+    display: flex;
+    flex-direction: row;
+}
+.ais-Pagination-item {
+    margin: 0 .5rem;
+    font-size: 1Srem;
+    border-radius: 5px;
+    border: 1px solid rgb(31 41 55);
+    color: rgb(31 41 55);
+    padding: .25rem .5rem;
+}
+.ais-Pagination-item--selected {
+    background-color: rgb(194 65 12);
+    border-color: rgb(194 65 12);
+    color: white;
+}
+.ais-Pagination-item--disabled {
+    color: lightgray;
+    border-color: lightgray;
+    cursor: not-allowed;
 }
