@@ -24,8 +24,7 @@ export default function Search({ indices }) {
             key={item.value}
             className="my-2 py-2 border-b"
           >
-            <a
-              href="#"
+            <button
               onClick={event => {
                 event.preventDefault();
                 refine(item.value);
@@ -33,7 +32,7 @@ export default function Search({ indices }) {
               className={item.label === currentRefinement ? "text-primary-800" : "text-gray-900 hover:text-primary-800"}
             >
               {item.label} ({item.count})
-            </a>
+            </button>
           </li>
         ))}
       </ul>

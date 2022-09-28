@@ -2,7 +2,7 @@ import * as React from 'react'
 
 const ContactForm = () => (
 
-    <form name="contact" method="post" className="bg-white dark:bg-gray-800 py-6 lg:px-28 px-8" data-netlify="true" netlify-honeypot="bot-field">
+    <form name="contact" method="post" className="bg-white dark:bg-gray-800 lg:px-28 px-8" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact"/>
         <input type="hidden" name="bot-field"/>
         <div className="md:flex items-center mt-12">

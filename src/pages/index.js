@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
     <Layout>
 
       {/* Hero */}
-      <section className='py-4 lg:py-16 mx-auto w-full bg-hero-pattern bg-cover bg-left h-96 flex'>
+      <section className='py-4 lg:py-16 mx-auto w-full bg-hero-pattern bg-cover bg-center h-96 flex shadow-lg'>
         <div className='flex flex-col justify-center items-center my-4 py-4 text-center max-w-3xl mx-auto'>
           <h2 className='font-bold text-5xl text-gray-900 mb-4'>{title}</h2>
           <p className='text-3xl font-bold text-gray-900'>{description}</p>
@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => {
           <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
             About this Blog
           </h2>
-          <p>Construction directly impacts where we live, where we work and go to school, where we shop, eat and entertain ourselves, and how we get from one place to another. In short, for most of us, the built environment “is” our world. At Nomos LLP, we understand the importance of construction – as well as the need to smile every once in awhile – and publish this blog to keep our friends and clients informed of new developments in construction law.</p>
+          <p className=''>Construction directly impacts where we live, where we work and go to school, where we shop, eat and entertain ourselves, and how we get from one place to another. In short, for most of us, the built environment “is” our world. At Nomos LLP, we understand the importance of construction – as well as the need to smile every once in awhile – and publish this blog to keep our friends and clients informed of new developments in construction law.</p>
         </div>
 
                 <div className="grid gap-5 row-gap-8 lg:grid-cols-2">
@@ -74,7 +74,7 @@ const IndexPage = ({ data }) => {
       </section>
 
       {/* Recent Posts */}
-      <section className="pb-4 lg:pb-16 mx-auto  w-full">
+      <section className="pb-4 lg:pb-16 mx-auto w-full">
         <div className="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
           <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
             Featured Posts

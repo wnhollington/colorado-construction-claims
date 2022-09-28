@@ -10,7 +10,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero-pattern':
-          "linear-gradient(to right bottom, rgba(230, 243, 255, 0.8), rgba(230, 243, 255, 0.8)), url('https://res.cloudinary.com/wnhollington/image/upload/v1663975567/colorado-construction-claims/header-image.jpg')",
+          "linear-gradient(to right bottom, rgba(255, 159, 128, 0.4), rgba(255, 159, 128, 0.4)), url('https://res.cloudinary.com/wnhollington/image/upload/v1664330324/colorado-construction-claims/istockphoto-629822156-612x612_d5ixvv.jpg')",
       },
     }
   },

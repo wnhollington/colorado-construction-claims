@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `My Gatsby Site`,
+        name: `Colorado Construction Claims`,
         start_url: `/`,
         background_color: `#f8f6f3`,
         theme_color: `#2a4234`,
@@ -127,6 +127,22 @@ module.exports = {
             title: "Colorado Business Torts | RSS Feed",
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          process.env.GA_Tracking_ID,
+        ],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
+        },
       },
     },
   ]
