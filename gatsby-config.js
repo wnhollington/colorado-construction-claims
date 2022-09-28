@@ -133,7 +133,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-          process.env.GA_Tracking_ID,
+          process.env.GA_TRACKING_ID
         ],
         gtagConfig: {
           anonymize_ip: true,
