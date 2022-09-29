@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Colorado Construction Claims`,
-    siteUrl: `https://www.coloradobusinesstorts.com`,
+    siteUrl: `https://www.coloradoconstructionclaims.com`,
     description: `Legal commentary on Colorado construction law`,
   },
   plugins: [
@@ -145,5 +145,6 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-sitemap"
   ]
 };
