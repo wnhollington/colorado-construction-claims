@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { useSiteMetadata } from '../../../hooks/use-site-metadata'
-// Components
 
 const Logo = () => {
   const { title } = useSiteMetadata();

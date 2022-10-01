@@ -17,12 +17,12 @@ function Article ({ data, children, pageContext }) {
 
   return (
     <Layout>
-        <header>
+        <header className='max-w-4xl mx-auto'>
             <div className="text-center my-10">
                 <div className="mb-10 md:mx-auto sm:text-center md:mb-8">
-                    <h2 className="mb-4 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">
+                    <h1 className="mb-4 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">
                         {title}
-                    </h2>
+                    </h1>
                     <ul className='flex flex-row space-x-4 justify-center'>
                         <li className='text-sm text-gray-600'>{lastmod}</li>
                         <li className='text-sm text-gray-600'>{timeToRead > 1 ? `${timeToRead} minutes` : `${timeToRead} minute`}</li>
@@ -41,11 +41,11 @@ function Article ({ data, children, pageContext }) {
             </div>
         </header>
 
-        <article>
+        <article className='max-w-4xl mx-auto'>
             {children}
         </article>
 
-        <nav className='flex justify-between my-6'>
+        <nav className='flex justify-between my-6 max-w-4xl mx-auto'>
  
             <Link 
                 to={previous ? `/blog/${previous.frontmatter.slug}`: null} 

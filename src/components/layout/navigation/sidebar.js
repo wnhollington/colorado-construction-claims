@@ -39,7 +39,7 @@ const Sidebar = ({modalOpen, setModalOpen}) => {
                     </svg>
                 </button>
             )}    
-            <nav className={`top-0 right-0 w-[50vw] sm:w-[35vw] bg-white p-10 text-white fixed h-full z-40 ease-in-out duration-600 ${ isMenuOpen ? "translate-x-0 " : "translate-x-full"
+            <nav className={`top-0 right-0 w-[50vw] sm:w-[35vw] bg-white p-10 text-white fixed h-full z-40  transition ease-in-out duration-900 ${ isMenuOpen ? "translate-x-0 " : "translate-x-full"
             } border-l-2 border-primary-700`}>
                 <ul className="space-y-4">
                     <li>

@@ -3,6 +3,10 @@ import { default as React, useState, useMemo } from "react"
 import { InstantSearch, SearchBox, connectMenu, Pagination } from "react-instantsearch-dom"
 import SearchResult from "./search-results"
 
+// Components
+import AboutBlog from "./sidebar/about-blog"
+import AboutAuthor from "./sidebar/about-author"
+
 export default function Search({ indices }) {
   const [query, setQuery] = useState()
   const [hasFocus] = useState(false)
@@ -15,9 +19,9 @@ export default function Search({ indices }) {
     []
   )
 
-  const Menu = ({ items, currentRefinement, refine, attribute}) => (
-    <div className="bg-gray-100 p-4 my-2 rounded-lg">
-      <h2 className="underline underline-offset-8 text-gray-900 font-bold">{attribute}</h2>
+  const Menu = ({ items, currentRefinement, refine, title}) => (
+    <div className="bg-gray-100 p-4 my-2 rounded-lg shadow">
+      <h2 className="underline underline-offset-8 text-gray-900 font-bold">{title}</h2>
       <ul className="my-2 p-2">
         {items.map(item => (
           <li 
@@ -48,6 +52,7 @@ export default function Search({ indices }) {
     >
       <div className="grid gap-5 row-gap-5 grid-cols-1 lg:grid-cols-4">
         <section className="col-span-3">
+          <h2 className="hidden">Latest Posts</h2>
           <SearchResult
             show={query && query.length > 0 && hasFocus}
             indices={indices}
@@ -74,11 +79,13 @@ export default function Search({ indices }) {
           />
 
         </section>
-        <section class="flex flex-col my-4 order-first lg:order-last">
+        <aside class="flex flex-col my-4 order-first lg:order-last">
           <SearchBox />
-          <CustomMenu attribute="category"/>
-          <CustomMenu attribute="tags"/>
-        </section>
+          <AboutBlog />
+          <AboutAuthor />
+          <CustomMenu attribute="category" title="Categories"/>
+          <CustomMenu attribute="tags" title="Tags"/>
+        </aside>
       </div>
 
     </InstantSearch>
