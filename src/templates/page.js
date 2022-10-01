@@ -10,7 +10,7 @@ function Page({ data: { mdx }, children }) {
   return (
     <Layout>
       <article>
-        {mdx.frontmatter.title === 'Disclaimer' || mdx.frontmatter.title === 'Privacy Policy' ? <><h1>{mdx.frontmatter.title}</h1> <p>Last Modified: {mdx.frontmatter.lastmod}</p></> : null}
+        {mdx.frontmatter.title === 'Disclaimer' || mdx.frontmatter.title === 'Privacy Policy' ? <><h1>{mdx.frontmatter.title}</h1> <p>Last Modified: {mdx.frontmatter.lastmod}</p></> : <h1 className='hidden'>{mdx.frontmatter.title}</h1>}
         {children}
       </article>
     </Layout>

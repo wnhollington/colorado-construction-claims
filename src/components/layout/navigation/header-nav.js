@@ -16,20 +16,20 @@ const HeaderNav = () => {
     <ul className="flex items-center hidden space-x-8 lg:flex">
       <li>
         <ExactNavLink
+          to="/"
+          aria-label="Home"
+          title="Home"
+        >
+          Home
+        </ExactNavLink>
+      </li>
+      <li>
+        <ExactNavLink
           to="/about"
           aria-label="About"
           title="About"
         >
           About
-        </ExactNavLink>
-      </li>
-      <li>
-        <ExactNavLink
-          to="/blog"
-          aria-label="Blog"
-          title="Blog"
-        >
-          Blog
         </ExactNavLink>
       </li>
       <li>

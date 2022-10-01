@@ -7,6 +7,7 @@ import ContactForm from "../components/elements/contact-form"
 
 const Blog = () => (
   <Layout>
+    <h1 className="hidden">Contact</h1>
     <div className="w-full flex items-center justify-center">
         <ContactForm />
     </div>   

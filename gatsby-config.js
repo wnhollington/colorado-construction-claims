@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Colorado Construction Claims`,
     siteUrl: `https://www.coloradoconstructionclaims.com`,
-    description: `Legal commentary on Colorado construction law`,
+    description: `Colorado construction law made simple`,
   },
   plugins: [
     "gatsby-plugin-postcss", 

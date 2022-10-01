@@ -8,7 +8,7 @@ import Contributors from '../elements/contributors'
 
 const shortcodes = { Contributors }
 
-export default function Layout({ children }) {
+export default function Layout({ children, title }) {
   
   return (
     <>
