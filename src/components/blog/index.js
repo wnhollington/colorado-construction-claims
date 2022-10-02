@@ -6,6 +6,7 @@ import SearchResult from "./search-results"
 // Components
 import AboutBlog from "./sidebar/about-blog"
 import AboutAuthor from "./sidebar/about-author"
+import TwitterFeed from "./sidebar/twitter-feed"
 
 export default function Search({ indices }) {
   const [query, setQuery] = useState()
@@ -83,6 +84,7 @@ export default function Search({ indices }) {
           <SearchBox />
           <AboutBlog />
           <AboutAuthor />
+          <TwitterFeed />
           <CustomMenu attribute="category" title="Categories"/>
           <CustomMenu attribute="tags" title="Tags"/>
         </aside>
