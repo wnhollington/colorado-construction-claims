@@ -44,9 +44,9 @@ const Sidebar = ({modalOpen, setModalOpen}) => {
                 <ul className="space-y-4">
                     <li>
                         <Link
-                        to="/about"
-                        aria-label="About"
-                        title="About"
+                        to="/"
+                        aria-label="Home"
+                        title="Home"
                         className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-primary-700"
                         >
                         About
@@ -54,9 +54,9 @@ const Sidebar = ({modalOpen, setModalOpen}) => {
                     </li>
                     <li>
                         <Link
-                        to="/blog"
-                        aria-label="Blog"
-                        title="Blog"
+                        to="/about"
+                        aria-label="About"
+                        title="About"
                         className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-primary-700"
                         >
                         Blog
