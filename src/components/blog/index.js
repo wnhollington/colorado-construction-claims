@@ -51,8 +51,8 @@ export default function Search({ indices }) {
       indexName={indices[0].name}
       onSearchStateChange={({ query }) => setQuery(query)}
     >
-      <div className="grid gap-5 row-gap-5 grid-cols-1 lg:grid-cols-4">
-        <section className="col-span-3">
+      <div className="grid gap-5 row-gap-5 grid-cols-1 md:grid-cols-12">
+        <section className="md:col-span-7 lg:col-span-8">
           <h2 className="hidden">Latest Posts</h2>
           <SearchResult
             show={query && query.length > 0 && hasFocus}
@@ -80,7 +80,7 @@ export default function Search({ indices }) {
           />
 
         </section>
-        <aside class="flex flex-col my-4 order-first lg:order-last">
+        <aside class="flex flex-col mx-auto w-full my-4 order-first md:order-last md:col-span-5 lg:col-span-4">
           <SearchBox />
           <AboutBlog />
           <AboutAuthor />

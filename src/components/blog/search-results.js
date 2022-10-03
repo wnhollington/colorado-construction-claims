@@ -9,7 +9,7 @@ import {
 const Hits = ({ hits }) => (
   <div className="grid gap-5 row-gap-5 mb-8 grid-cols-1 lg:grid-cols-2">
     {hits.map(hit => (
-      <article>
+      <article className="sm:max-w-lg">
         <Link
           to={`/blog/${hit.slug}`}
           aria-label="View Item"
@@ -21,7 +21,7 @@ const Hits = ({ hits }) => (
               className="object-cover w-full h-48"
               alt={hit.title}
             />
-            <div className="flex-grow border border-t-0 rounded-b">
+            <div className="flex-grow border border-t-0 rounded-b h-56 lg:h-36">
               <div className="p-5">
                 <h3 className="mb-2 font-semibold leading-5">
                   {hit.title}

@@ -6,7 +6,7 @@ const AboutAuthor = () => {
         <div className="bg-gray-100 p-4 my-2 rounded-lg shadow">
             <h2 className="underline underline-offset-8 text-gray-900 font-bold">About the Author</h2>
             <img
-              className="my-4 rounded h-56 w-56"
+              className="my-4 mx-auto rounded h-56 w-56"
               src="https://res.cloudinary.com/wnhollington/image/upload/v1663896646/Neal_Hollington_8b6ae1c8d6.jpg"
               alt="W. Neal Hollington"
             />
