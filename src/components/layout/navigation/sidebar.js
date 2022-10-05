@@ -49,7 +49,7 @@ const Sidebar = ({modalOpen, setModalOpen}) => {
                         title="Home"
                         className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-primary-700"
                         >
-                        About
+                        Home
                         </Link>
                     </li>
                     <li>
@@ -59,7 +59,7 @@ const Sidebar = ({modalOpen, setModalOpen}) => {
                         title="About"
                         className="font-medium tracking-wide text-gray-600 transition-colors duration-200 hover:text-primary-700"
                         >
-                        Blog
+                        About
                         </Link>
                     </li>
                     <li>
