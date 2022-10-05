@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Colorado Construction Claims`,
     siteUrl: `https://www.coloradoconstructionclaims.com`,
-    description: `Colorado construction law made simple`,
+    description: `Whether you are a homeowner or construction professional, this site was built with you in mind.  Construction impacts nearly every facet of our daily lives.  It affects where we live, work, eat, and recreate.  The purpose of this blog it do provide timely and straightforward legal analysis of Colorado's construction industry and construction law.`,
   },
   plugins: [
     "gatsby-plugin-postcss", 

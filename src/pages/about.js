@@ -13,8 +13,8 @@ const authorBio= {
     description: "W. Neal Hollington is a Colorado construction attorney who handles transactional and litigation matters for clients throughout the state of Colorado.  He routinely represent investors, owners, contractors, and subcontractors in real estate and construction-related matters.  Beyond serving as litigation counsel, he helps clients streamline their business operations through effective counsel on contract drafting and negotiation, due diligence, business planning, employment and independent contractor issues, and other business-related concerns.",
     education: ['University of Georgia School of Law', 'University of Colorado - Boulder'],
     recognitions: [
-        'Best Lawyers "Ones to Watch" 2023- Commercial Litigation',
-        'Best Lawyers "Ones to Watch" 2023- Construction Law'
+        'Best Lawyers "Ones to Watch" - Commercial Litigation',
+        'Best Lawyers "Ones to Watch" - Construction Law'
     ],
     social: {
         linkedin: "https://www.linkedin.com/in/wnhollington",
