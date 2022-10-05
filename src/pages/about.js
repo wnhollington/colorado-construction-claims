@@ -35,7 +35,7 @@ const About = () => {
                 </div>
 
                 <div className="col-span-8">
-                    <div className="flex flex-row justify-between items-center border-b-2 pb-2">
+                    <div className="flex flex-row justify-between items-center border-b-2 mx-2 pb-2">
                         <h2 className="text-large bold text-gray-800">{authorBio.name}</h2>
                         <div className="flex items-center mt-1 space-x-3">
                             <a
@@ -64,7 +64,7 @@ const About = () => {
                     </div>
                     
                     <div>
-                        <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 my-2">
+                        <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 my-2 mx-2">
                             <li class="mr-2">
                                 <button className={`inline-block p-4 bg-gray-100 rounded-t-lg ${activeTab === "tab1" ? "active text-primary-700" : ""}`} onClick={() => setActiveTab("tab1")}>About</button>
                             </li>
@@ -75,7 +75,7 @@ const About = () => {
                                 <button className={`inline-block p-4 bg-gray-100 rounded-t-lg ${activeTab === "tab3" ? "active text-primary-700" : ""}`} onClick={() => setActiveTab("tab3")}>Recognitions</button>
                             </li>
                         </ul>
-                        <div className="text-gray-900 my-6 px-2">
+                        <div className="text-gray-900 my-6 mx-2">
                             {activeTab === "tab1" && (
                                 authorBio.description
                             )}
