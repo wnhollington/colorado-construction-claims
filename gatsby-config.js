@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Colorado Construction Claims`,
     siteUrl: `https://www.coloradoconstructionclaims.com`,
-    description: `Whether you are a homeowner or construction professional, this site was built with you in mind.  Construction impacts nearly every facet of our daily lives.  It affects where we live, work, eat, and recreate.  As with many aspect of the law; however, constructions legal landscape can often be confusing and convoluted.  The purpose of this blog is provide you with timely and straightforward analysis of new developments in Colorado's construction industry and construction law.`,
+    description: `Whether you are a homeowner or construction professional, this site was built with you in mind.  Construction impacts nearly every facet of our daily lives.  It affects where we live, work, eat, and recreate.  As with many aspect of the law; however, the legal landscape of Colorado construction law can often be confusing and convoluted.  The purpose of this blog is to provide you with timely and straightforward analysis of new developments in Colorado's construction industry and construction law.`,
   },
   plugins: [
     "gatsby-plugin-postcss", 
