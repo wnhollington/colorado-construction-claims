@@ -26,10 +26,6 @@ article p {
     @apply my-4
 }
 
-main p {
-    @apply my-4
-}
-
 article ul {
     list-style-type: disc;
     margin-left: 1rem;

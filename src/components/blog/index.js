@@ -85,7 +85,7 @@ export default function Search({ indices }) {
           <AboutBlog />
           <AboutAuthor />
           <TwitterFeed />
-          <CustomMenu attribute="category" title="Categories"/>
+          <CustomMenu attribute="categories" title="Categories"/>
         </aside>
       </div>
 

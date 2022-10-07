@@ -10,7 +10,7 @@ const pageQuery = `{
           lastmod(formatString: "MMMM D, YYYY")
           description
           img
-          category
+          categories
           tags
         }
         id
@@ -33,7 +33,7 @@ const queries = [
     transformer: ({ data }) => data.articles.edges.map(pageToAlgoliaRecord),
     indexName,
     settings: {
-      attributesForFaceting: [`category`, `tags`],
+      attributesForFaceting: [`categories`, `tags`],
       attributesToSnippet: [`description:20`],
     },
   },

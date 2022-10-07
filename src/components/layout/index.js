@@ -4,9 +4,6 @@ import { MDXProvider } from '@mdx-js/react'
 // Components
 import Header from './header'
 import Footer from './footer'
-import Contributors from '../elements/contributors'
-
-const shortcodes = { Contributors }
 
 export default function Layout({ children, title }) {
   
@@ -14,7 +11,7 @@ export default function Layout({ children, title }) {
     <>
       <Header />
       <main className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <MDXProvider components={shortcodes}>
+        <MDXProvider>
           {children}
         </MDXProvider>
       </main>
